@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1反正总有个地方要处理异常的, 但最好不要把SQLException这种底层异常向上抛, SQLException中有太多的底层信息不便外泄, 所以这个时候可以自定义异常,你仍然可以捕捉SQLException,再把经过你包装的自定义异常抛出, 但自定义异常一般不要写成CheckedExcpetion,这样调用方必须得捕获你的异常, 但有的时候这种异常捕获了也没用,比如你的SQL语句写错了,">
+<meta name="description" content="根据具体的情况而定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="异常上抛还是捕获">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;15&#x2F;Exception-catch&#x2F;index.html">
 <meta property="og:site_name" content="Rong">
-<meta property="og:description" content="1反正总有个地方要处理异常的, 但最好不要把SQLException这种底层异常向上抛, SQLException中有太多的底层信息不便外泄, 所以这个时候可以自定义异常,你仍然可以捕捉SQLException,再把经过你包装的自定义异常抛出, 但自定义异常一般不要写成CheckedExcpetion,这样调用方必须得捕获你的异常, 但有的时候这种异常捕获了也没用,比如你的SQL语句写错了,">
+<meta property="og:description" content="根据具体的情况而定">
 <meta property="article:published_time" content="2019-12-15T11:17:07.000Z">
-<meta property="article:modified_time" content="2019-12-15T13:53:23.443Z">
+<meta property="article:modified_time" content="2019-12-15T14:06:03.691Z">
 <meta property="article:author" content="Rong">
 <meta name="twitter:card" content="summary">
 
@@ -308,7 +308,8 @@
       
 
       
-        <a id="more"></a>
+        <p>根据具体的情况而定</p>
+<a id="more"></a>
 
 <h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>反正总有个地方要处理异常的,</p>
 <p>但最好不要把SQLException这种底层异常向上抛,</p>

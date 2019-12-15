@@ -310,29 +310,14 @@
 
       
         
-          
-            <a id="more"></a>
-
-<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>反正总有个地方要处理异常的,</p>
-<p>但最好不要把SQLException这种底层异常向上抛,</p>
-<p>SQLException中有太多的底层信息不便外泄,</p>
-<p>所以这个时候可以自定义异常,你仍然可以捕捉SQLException,再把经过你包装的自定义异常抛出,</p>
-<p>但自定义异常一般不要写成CheckedExcpetion,这样调用方必须得捕获你的异常,</p>
-<p>但有的时候这种异常捕获了也没用,比如你的SQL语句写错了,</p>
-<p>所以自定义异常要写成RuntimeException,</p>
-<p>这样调用方就不一定要捕获你抛出的异常,</p>
-<p>而且你抛出的异常并没有侵入你的接口,如果是CheckedExcpetion,</p>
-<p>你的接口是不是也要抛出异常!!!</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>但是还有一点，虽然使用RuntimeException可以不需要在接口定义，但是同样的，这样也就意味着，你无法在编译级别来强制你的上层程序来处理这个异常。换言之，你很有可能错过这个异常的处理。</p>
-<p>我的建议是，如果你的这个异常是希望上层程序一定要处理的，不妨继承Exception，这样就不会出错了。</p>
-<p>有一点是肯定的，那就是异常处理最好统一在一个地方处理，这样方便管理，也不容易出错。</p>
-<p>不过不建议把异常定义成BookException这种名字，异常定义应该更抽象一些，具体信息你可以放在Exception的message中，或者自定义一个Exception的基类，在你自己的基类中定义一些你需要用的信息。</p>
-<p>向上抛能获得一个统一的处理吧 这个还是得看自己需要 比如你有一个基类 其中有个处理异常的方法，所有继承这个基类的的类 都可以将异常往上抛 让基类来处理异常</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>不要因为技术破坏业务.</p>
-<p>绝对不要在同一个地方处理所有异常.</p>
-<p>同类同层次异常可以在同一个地方处理.</p>
-
-          
+          <p>根据具体的情况而定</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/15/Exception-catch/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
